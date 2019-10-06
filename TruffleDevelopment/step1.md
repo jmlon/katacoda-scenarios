@@ -4,10 +4,15 @@ La consola Linux (CentOS 7) en la parte inferior derecha es una instalación bá
 Para instalar las herramientas necesarias para el desarrollo de contratos inteligentes, se deben
 ingresar los siguientes comandos en la consola:
 
-1. Instalar las herramientas de desarrollo (Lenguajes C y C++) en el ambiente linux
+1. Cambiar al rol root
+`su -`{{execute}}
+
+2. Instalar las herramientas de desarrollo (Lenguajes C y C++) en el ambiente linux
 `yum install -y gcc.x86_64 gcc-c++.x86_64 make.x86_64`{{execute}}
-2. Actualizar los repositorios Yum para obtener una versión actual de node.js
+
+3. Actualizar los repositorios Yum para obtener una versión actual de node.js
 `curl -sL https://rpm.nodesource.com/setup_10.x | bash -`{{execute}}
-3. Instalar node.js
+
+4. Instalar node.js
 `yum install -y nodejs`{{execute}}
 
