@@ -1,6 +1,4 @@
-# Desarrollo de Contratos Inteligentes con Truffle y Ganache
-
-## Primer paso: Preparación del entorno de desarrollo
+## Preparación del entorno de desarrollo
 
 La consola Linux (CentOS 7) en la parte inferior derecha es una instalación básica de linux.
 Para instalar las herramientas necesarias para el desarrollo de contratos inteligentes, se deben
