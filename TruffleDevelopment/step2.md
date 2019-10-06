@@ -21,3 +21,9 @@ gestor de paquetes de node, npm:
 
 5. Salir del rol de superusuario  
 `exit`{{execute}}
+
+<!--
+Produce errores
+/usr/bin/node /usr/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js rebuild
+-->
+
