@@ -19,3 +19,10 @@ ingresar los siguientes comandos en la consola:
 5. Instalar node.js  
 `yum install -y nodejs`{{execute}}
 
+6. Salir del rol de superusuario  
+`exit`{{execute}}
+
+7. Comprobar versiones instaladas de node.js y de npm  
+`node -v`{{execute}}  
+`npm -v`{{execute}}  
+
