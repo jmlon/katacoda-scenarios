@@ -30,3 +30,8 @@ contract('GuestBook', accounts => {
 
 }
 </pre>
+
+
+Para realizar la comprobaciones de las pruebas unitarias se ejecuta:
+
+`truffle test`{{execute}}
