@@ -3,11 +3,11 @@
 En este paso se va a crear el contrato inteligente GuestBook, el cual ofrece la funcionalidad de registrar todos los visitantes de una página, guardar la fecha de visita, la dirección del visitante y un mensaje que deje el visitante.
 
 A través de editor de texto, crear el archivo fuente del contrato en la carpeta
-`contracts` con el nombre `GuestBook.sol`. La extensión .sol identifica los archivos fuente en el lenguaje Solidity.
+`contracts` con el nombre `contracts/GuestBook.sol`. La extensión .sol identifica los archivos fuente en el lenguaje Solidity.
 
 Ingresar el siguiente programa en el editor de texto:  
 
-<pre class="file" data-filename="contracts\GuestBook.sol" data-target="replace">
+<pre class="file" data-filename="contracts/GuestBook.sol" data-target="replace">
 pragma solidity ^0.5.8;
 
 contract GuestBook {
