@@ -16,3 +16,5 @@ iniciales del proyecto así:
 contrato", es decir desplegar un contrato en el blockchain.
 - `test` : Aquí es donde se coloca el código que permite ejecutar pruebas del correcto funcionamiento del contrato.
 - `truffle-config.js` : Es la configuración del proyecto Truffle.
+- `build` : Se crea luego de haber realizado una compilación. Contiene el código compilado.
+ 
