@@ -28,7 +28,7 @@ contract('GuestBook', accounts => {
   })
 
 
-}
+});
 </pre>
 
 
