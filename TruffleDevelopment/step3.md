@@ -4,8 +4,8 @@ Truffle ofrece varias funciones para facilitar el desarrollo de contratos inteli
 En primer lugar debemos crear un directorio para el proyecto e inicializarlo como un proyecto Truffle:
 
 `cd`{{execute}}  
-`mkdir GuestBook`{{execute}}  
-`cd GuestBook`{{execute}}  
+`mkdir -p tutorial/GuestBook`{{execute}}  
+`cd tutorial/GuestBook`{{execute}}  
 `truffle init`{{execute}}  
 
 Luego de inicializar el proyecto, truffle crea el árbol de directorios y archivos
