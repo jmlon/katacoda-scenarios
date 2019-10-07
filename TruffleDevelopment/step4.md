@@ -7,6 +7,8 @@ A través de editor de texto, crear el archivo fuente del contrato en la carpeta
 
 Ingresar el siguiente programa en el editor de texto:  
 
+---
+
   pragma solidity ^0.5.8;
 
   contract GuestBook {
@@ -30,3 +32,5 @@ Ingresar el siguiente programa en el editor de texto:
     }
 
   }
+
+---
