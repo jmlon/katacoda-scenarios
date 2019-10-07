@@ -32,3 +32,13 @@ contract GuestBook {
 
 }
 </pre>
+
+Se puede compilar el SmartContract por medio del comando:  
+`truffle compile`{{execute}}
+
+y para consultar las opciones de compilación soportadas por truffle:  
+`truffle help compile`{{execute}}
+
+por ejemplo, asi se pueden obtener la lista de versiones del compilador de Solidity soportadas por truffle:  
+`truffle compile --list`{{execute}}
+

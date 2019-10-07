@@ -1,72 +1,37 @@
-## Pruebas del contrato
+## Configuración de la migración
 
-Para realizar pruebas unitarias del contrato inteligentes se
-crea un nuevo archivo `test/guestbook.js` y se le agrega el siguiente
-código:
+Para desplegar el contrato se crea un script de migracion del contrato:
+Crear un nuevo archivo `migrations/2_guestbook.js` y agregar el siguiente
+contenido:  
 
+<pre class="file" data-filename="migrations/2_guestbook.js"
+data-target="replace">var GuestBook = artifacts.require("./GuestBook.sol");
 
-<pre class="file" data-filename="test/guestbook.js" data-target="replace">
-const gb = artifacts.require('GuestBook')
-
-contract('GuestBook', accounts => {
-  let instance;
-
-  // deploy before running tests
-  before( async () => {
-    instance = await gb.deployed();
-  })
-
-  // tests
-  describe('deployment', async () => {
-
-      // Comprobar que ha sido desplegado exitosamente
-      it('Despliegue exitoso', async () => {
-        const address = await instance.address
-        assert.notEqual(address, 0x0)
-        assert.notEqual(address, '')
-        assert.notEqual(address, null)
-        assert.notEqual(address, undefined)
-      })
-
-      // Comprobar que el número de visitantes al momento de empezar es cero
-      it('numeroVisitantes debe ser cero', async () => {
-        const expectedValue=0;
-        const actualValue = await instance.numeroVisitantes();
-        console.log('expectedValue', expectedValue)
-        console.log('actualValue', actualValue, parseInt(actualValue))
-        assert.equal(expectedValue, parseInt(actualValue), 'actualValue is not equal to actualValue')
-      })
-
-      // Comprobar que se registran mensajes en el libro de visitas
-      it('publica visita', async() => {
-        const msg = 'Hola, saludos de un visitante';
-        await instance.registrarVisita(msg)
-        const nro = await instance.numeroVisitantes();
-        assert.equal(1, parseInt(nro), 'Debe haber un registro de visita')
-        const visita = await instance.visitas(0);
-        assert.equal(msg, visita.mensaje, 'El mensaje recuperado debe ser igual al publicado')
-      })
-
-
-    })
-
-
-
-
-});
+module.exports = function(deployer) {
+  deployer.deploy(GuestBook);
+};
 </pre>
 
 
+Arrancar el emulador local de Ethereum para efecto de poder desarrollar
+las pruebas. En una nueva pestaña 'Terminal' ejecutar el comando:  
+`ganache-cli`{{execute}}
 
 
-Para realizar la comprobaciones de las pruebas unitarias se ejecuta:
+Configurar la red de desarrollo donde se desplegará el contrato inteligente para las pruebas:
+Editar el archivo truffle-config.js y en la sección networks, activar la red de desarrollo,
+la cual se ejecuta sobre ganache-cli:  
 
-`truffle test`{{execute}}
+<pre class="file" data-filename="GuestBook/truffle-config.js" data-target="replace">
+networks: {
+    development: {
+      host: '127.0.0.1',
+      port: 8545,
+      network_id: '*' // Match any network id
+    }
+}
+</pre>
 
 
-
-<!--
-
-Included in truffle are the Mocha testing framework and the Chai assertion library.
-
--->
+Migrar (desplegar el contrato inteligente) en el blockchain local de ganache:  
+`truffle migrate`{{execute}}
