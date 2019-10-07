@@ -9,7 +9,7 @@ gestor de paquetes de node, npm:
 
 2. Instalación del compilador de Solidity  
 `truffle obtain --solc=0.5.8`{{execute}}
- 
+
 3. Instalación de Ganache  
 `npm i -g ganache-cli`{{execute}}
 
@@ -26,4 +26,3 @@ gestor de paquetes de node, npm:
 Produce errores
 /usr/bin/node /usr/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js rebuild
 -->
-
